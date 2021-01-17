@@ -9,38 +9,6 @@
 #'     \item KolmogorovSmirnov
 #'     \item PearsonChiSquare
 #' }
-#funkcja podstawowa
-NormalityTesting <- function(x){
-
-  stopifnot(is.numeric(x))
-
-  shapiro.p <- stats::shapiro.test(x)$p.value
-  jb.p <- tseries::jarque.bera.test(x)$p.value
-  ad.p <- nortest::ad.test(x)$p.value
-  ks.p <- nortest::lillie.test(x)$p.value
-  chi.p <- nortest::pearson.test(x)$p.value
-  res <- round(c("Shapiro" = shapiro.p,
-                 "JarqueBera" = jb.p,
-                 "AndersonDarling" = ad.p,
-                 "KolmogorovSmirnov" = ks.p,
-                 "PearsonChiSquare" = chi.p),4)
-
-  class(res)<-append(class(res), 'NormalityTesting')
-  return(res)
-
-}
-
-#' funkcja generyczna
-#' @export
-#' @param x proba poddawana testom normalnosci
-#' #' @return Funkcja zwraca p.value dla 5 testow normalnosci:
-#' \itemize{
-#'     \item Shapiro
-#'     \item JarqueBera
-#'     \item AndersonDarling
-#'     \item KolmogorovSmirnov
-#'     \item PearsonChiSquare
-#' }
 NormalityTesting <- function(x) UseMethod("NormalityTesting")
 
 #' funkcja przeprowadzajaca testy normalnosci dla zadanej proby.

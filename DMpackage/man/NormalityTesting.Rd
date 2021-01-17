@@ -5,19 +5,9 @@
 \title{funkcja przeprowadzajaca testy normalnosci dla zadanej proby.}
 \usage{
 NormalityTesting(x)
-
-NormalityTesting(x)
 }
 \arguments{
-\item{x}{proba poddawana testom normalnosci
-#' @return Funkcja zwraca p.value dla 5 testow normalnosci:
-\itemize{
-    \item Shapiro
-    \item JarqueBera
-    \item AndersonDarling
-    \item KolmogorovSmirnov
-    \item PearsonChiSquare
-}}
+\item{x}{proba poddawana testom normalnosci}
 }
 \value{
 Funkcja zwraca p.value dla 5 testow normalnosci:
@@ -31,6 +21,4 @@ Funkcja zwraca p.value dla 5 testow normalnosci:
 }
 \description{
 funkcja przeprowadzajaca testy normalnosci dla zadanej proby.
-
-funkcja generyczna
 }
