@@ -28,7 +28,10 @@ NormalityTesting <- function(x){
 #' @param ... not sure
 NormalityTesting <- function(x, ...) UseMethod("NormalityTesting")
 
-
+#' funkcja przeprowadzajaca 5 testow normalnosci: Shapiro-Wilka, Jarque-Bera, Andersona-Darlinga, Kolmogorova-Smirnova oraz test Chi Pearsona dla zadanej proby.
+#' @export
+#' @param x proba poddawana testom normalnosci
+#' @param ... not sure
 NormalityTesting.default <- function(x, ...){
 
   stopifnot(is.numeric(x))
