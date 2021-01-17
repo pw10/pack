@@ -2,15 +2,15 @@
 % Please edit documentation in R/distMix.R
 \name{print.DistMixing}
 \alias{print.DistMixing}
-\title{Komentarz}
+\title{Metoda wypisujaca obiekt klasy DistMixing}
 \usage{
 \method{print}{DistMixing}(x, ...)
 }
 \arguments{
 \item{x}{obiekt klasy DistMixing, ktory chcemy wypisac}
 
-\item{...}{not sure}
+\item{...}{dalsze argumenty przekazywane do lub z innych metod}
 }
 \description{
-Komentarz
+Metoda wypisujaca obiekt klasy DistMixing
 }

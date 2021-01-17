@@ -1,6 +1,14 @@
-#' funkcja przeprowadzajaca 5 testow normalnosci: Shapiro-Wilka, Jarque-Bera, Andersona-Darlinga, Kolmogorova-Smirnova oraz test Chi Pearsona dla zadanej proby.
+#' funkcja przeprowadzajaca testy normalnosci dla zadanej proby.
 #' @export
 #' @param x proba poddawana testom normalnosci
+#' @return Funkcja zwraca p.value dla 5 testow normalnosci:
+#' \itemize{
+#'     \item Shapiro
+#'     \item JarqueBera
+#'     \item AndersonDarling
+#'     \item KolmogorovSmirnov
+#'     \item PearsonChiSquare
+#' }
 #funkcja podstawowa
 NormalityTesting <- function(x){
 
@@ -25,14 +33,28 @@ NormalityTesting <- function(x){
 #' funkcja generyczna
 #' @export
 #' @param x proba poddawana testom normalnosci
-#' @param ... not sure
-NormalityTesting <- function(x, ...) UseMethod("NormalityTesting")
+#' #' @return Funkcja zwraca p.value dla 5 testow normalnosci:
+#' \itemize{
+#'     \item Shapiro
+#'     \item JarqueBera
+#'     \item AndersonDarling
+#'     \item KolmogorovSmirnov
+#'     \item PearsonChiSquare
+#' }
+NormalityTesting <- function(x) UseMethod("NormalityTesting")
 
-#' funkcja przeprowadzajaca 5 testow normalnosci: Shapiro-Wilka, Jarque-Bera, Andersona-Darlinga, Kolmogorova-Smirnova oraz test Chi Pearsona dla zadanej proby.
+#' funkcja przeprowadzajaca testy normalnosci dla zadanej proby.
 #' @export
 #' @param x proba poddawana testom normalnosci
-#' @param ... not sure
-NormalityTesting.default <- function(x, ...){
+#' @return Funkcja zwraca p.value dla 5 testow normalnosci:
+#' \itemize{
+#'     \item Shapiro
+#'     \item JarqueBera
+#'     \item AndersonDarling
+#'     \item KolmogorovSmirnov
+#'     \item PearsonChiSquare
+#' }
+NormalityTesting.default <- function(x){
 
   stopifnot(is.numeric(x))
 
@@ -52,11 +74,18 @@ NormalityTesting.default <- function(x, ...){
 
 }
 
-#' funkcja przeprowadzajaca 5 testow normalnosci: Shapiro-Wilka, Jarque-Bera, Andersona-Darlinga, Kolmogorova-Smirnova oraz test Chi Pearsona dla zadanej proby.
+#' funkcja przeprowadzajaca testy normalnosci dla obiektu klasy DistMixing
 #' @export
-#' @param x proba poddawana testom normalnosci
-#' @param ... not sure
-NormalityTesting.DistMixing <- function(x, ...){
+#' @param x obiekt klasy DistMixing
+#' @return Funkcja zwraca p.value dla 5 testow normalnosci:
+#' \itemize{
+#'     \item Shapiro
+#'     \item JarqueBera
+#'     \item AndersonDarling
+#'     \item KolmogorovSmirnov
+#'     \item PearsonChiSquare
+#' }
+NormalityTesting.DistMixing <- function(x){
 
   shapiro.p <- stats::shapiro.test(x$vec)$p.value
   jb.p <- tseries::jarque.bera.test(x$vec)$p.value
@@ -77,8 +106,8 @@ NormalityTesting.DistMixing <- function(x, ...){
 
 #' funkcja sluzaca do wypisywania wynikow NormalityTesting
 #' @export
-#' @param x obiekt klasy NormalityTesting, kt nalezy wypisac
-#' @param ... not sure
+#' @param x obiekt klasy NormalityTesting, ktory nalezy wypisac
+#' @param ... dalsze argumenty przekazywane do lub z innych metod
 print.NormalityTesting <- function(x, ...){
   cat("Wyniki testow normalnosci (H0 - badany rozklad jest rozkladem normalnym):\n")
   print(data.frame(p.value = x))

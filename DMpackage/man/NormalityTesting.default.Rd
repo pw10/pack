@@ -2,15 +2,23 @@
 % Please edit documentation in R/NormTests.R
 \name{NormalityTesting.default}
 \alias{NormalityTesting.default}
-\title{funkcja przeprowadzajaca 5 testow normalnosci: Shapiro-Wilka, Jarque-Bera, Andersona-Darlinga, Kolmogorova-Smirnova oraz test Chi Pearsona dla zadanej proby.}
+\title{funkcja przeprowadzajaca testy normalnosci dla zadanej proby.}
 \usage{
-\method{NormalityTesting}{default}(x, ...)
+\method{NormalityTesting}{default}(x)
 }
 \arguments{
 \item{x}{proba poddawana testom normalnosci}
-
-\item{...}{not sure}
+}
+\value{
+Funkcja zwraca p.value dla 5 testow normalnosci:
+\itemize{
+    \item Shapiro
+    \item JarqueBera
+    \item AndersonDarling
+    \item KolmogorovSmirnov
+    \item PearsonChiSquare
+}
 }
 \description{
-funkcja przeprowadzajaca 5 testow normalnosci: Shapiro-Wilka, Jarque-Bera, Andersona-Darlinga, Kolmogorova-Smirnova oraz test Chi Pearsona dla zadanej proby.
+funkcja przeprowadzajaca testy normalnosci dla zadanej proby.
 }

@@ -2,9 +2,9 @@
 % Please edit documentation in R/distMix.R
 \name{DistMixing.default}
 \alias{DistMixing.default}
-\title{funkcja generujaca probe pochodzaca z 2 zadanych rozkladow}
+\title{Funkcja mieszajaca rozklady}
 \usage{
-\method{DistMixing}{default}(n, family_1, par_1, family_2, par_2, p = 0.5, ...)
+\method{DistMixing}{default}(n, family_1, par_1, family_2, par_2, p = 0.5)
 }
 \arguments{
 \item{n}{dlugosc proby}
@@ -18,9 +18,15 @@
 \item{par_2}{parametry drugiego z rozkladow}
 
 \item{p}{czesc koncowej proby jaka maja stanowic obserwacje wylosowane z 1 rozkladu}
-
-\item{...}{not sure}
+}
+\value{
+Funkcja generujaca probe pochodzaca z 2 zadanych rozkladow
+\item{vec}{Wylosowana proba}
+\item{fam1}{nazwa pierwszego rozkladu}
+\item{fam2}{nazwa drugiego z rozkladow}
+\item{pars1}{parametry pierwszego rozkladu}
+\item{pars2}{parametry drugiego z rozkladow}
 }
 \description{
-funkcja generujaca probe pochodzaca z 2 zadanych rozkladow
+Funkcja mieszajaca rozklady
 }

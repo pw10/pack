@@ -7,9 +7,9 @@
 \method{print}{NormalityTesting}(x, ...)
 }
 \arguments{
-\item{x}{obiekt klasy NormalityTesting, kt nalezy wypisac}
+\item{x}{obiekt klasy NormalityTesting, ktory nalezy wypisac}
 
-\item{...}{not sure}
+\item{...}{dalsze argumenty przekazywane do lub z innych metod}
 }
 \description{
 funkcja sluzaca do wypisywania wynikow NormalityTesting

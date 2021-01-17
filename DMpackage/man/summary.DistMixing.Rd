@@ -2,15 +2,15 @@
 % Please edit documentation in R/distMix.R
 \name{summary.DistMixing}
 \alias{summary.DistMixing}
-\title{Komentarz}
+\title{Metoda obliczajaca podstawowe statystyki opisowe}
 \usage{
 \method{summary}{DistMixing}(object, ...)
 }
 \arguments{
-\item{object}{obiekt klasy DistMixing, dla ktorego chcemy obliczyc podst. statystyki opisowe}
+\item{object}{obiekt klasy DistMixing}
 
-\item{...}{not sure}
+\item{...}{dalsze argumenty przekazywane do lub z innych metod}
 }
 \description{
-Komentarz
+Metoda obliczajaca podstawowe statystyki opisowe
 }
