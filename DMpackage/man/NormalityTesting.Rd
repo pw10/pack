@@ -12,13 +12,17 @@ NormalityTesting(x)
 \value{
 Funkcja zwraca p.value dla 5 testow normalnosci:
 \itemize{
-    \item Shapiro
-    \item JarqueBera
-    \item AndersonDarling
-    \item KolmogorovSmirnov
-    \item PearsonChiSquare
+\item Shapiro
+\item JarqueBera
+\item AndersonDarling
+\item KolmogorovSmirnov
+\item PearsonChiSquare
 }
 }
 \description{
 funkcja przeprowadzajaca testy normalnosci dla zadanej proby.
+}
+\seealso{
+\link{DistMixing}- druga funckja z tego pakietu \cr
+\link{print.NormalityTesting}- wyswietla wyniki
 }

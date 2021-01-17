@@ -9,6 +9,9 @@
 #'     \item KolmogorovSmirnov
 #'     \item PearsonChiSquare
 #' }
+#' @seealso [DistMixing]- druga funckja z tego pakietu \cr
+#' [print.NormalityTesting]- wyswietla wyniki
+#' @md
 NormalityTesting <- function(x) UseMethod("NormalityTesting")
 
 #' funkcja przeprowadzajaca testy normalnosci dla zadanej proby.

@@ -12,11 +12,11 @@
 \value{
 Funkcja zwraca p.value dla 5 testow normalnosci:
 \itemize{
-    \item Shapiro
-    \item JarqueBera
-    \item AndersonDarling
-    \item KolmogorovSmirnov
-    \item PearsonChiSquare
+\item Shapiro
+\item JarqueBera
+\item AndersonDarling
+\item KolmogorovSmirnov
+\item PearsonChiSquare
 }
 }
 \description{

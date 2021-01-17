@@ -12,6 +12,9 @@
 #' \item{fam2}{nazwa drugiego z rozkladow}
 #' \item{pars1}{parametry pierwszego rozkladu}
 #' \item{pars2}{parametry drugiego z rozkladow}
+#' @seealso [print.DistMixing]- wyswietlanie wyniku \cr
+#' [summary.DistMixing]- statystyki opisowe
+#' @md
 DistMixing <- function(n, family_1, par_1, family_2, par_2, p = .5) UseMethod("DistMixing")
 
 #' Funkcja mieszajaca rozklady

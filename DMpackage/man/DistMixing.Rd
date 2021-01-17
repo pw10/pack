@@ -30,3 +30,7 @@ Funkcja generujaca probe pochodzaca z 2 zadanych rozkladow
 \description{
 Funkcja mieszajaca rozklady
 }
+\seealso{
+\link{print.DistMixing}- wyswietlanie wyniku \cr
+\link{summary.DistMixing}- statystyki opisowe
+}
